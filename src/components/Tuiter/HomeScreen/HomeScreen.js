@@ -1,109 +1,87 @@
-import NavigationSidebar from ".././NavigationSidebar";
-import PostSummaryListItem from "../PostSummaryList"
-import HomeComponent from "./HomeComponent";
-
+import HomeComponent from "./homecomponent";
+import Navigationsidebar from ".././NavigationSidebar";
+import PostList from ".././PostList";
+import PostSummaryList from "../PostSummaryList";
+import React from "react";
 const HomeScreen = () => {
     return (
         <>
-            <div className="d-none d-xxl-block wd-fg-color-white wd-back-black">
-        <div className="row mt-2">
-        <div className="col-2 col-md-2 col-lg-1 col-xl-2">
-            <NavigationSidebar active = "home" size = "xl"/>
-        </div>
-        <div className = "col-6">
-        <HomeComponent/>
-        </div>
-        <div className="d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4">
-        <label className="wd-search-color1">
-            <PostSummaryListItem/>
-            </label>
-        </div>
-        </div>
-        </div>
-            <div className="d-none d-xl-block d-xxl-none wd-fg-color-white wd-back-black">
-            {/*This is xl block*/}
-                <div className="row mt-2">
-                    <div className="col-2 col-md-2 col-lg-1 col-xl-2">
-                        <NavigationSidebar active = "home" size = "xl"/>
-                    </div>
-                    <div className = "col-6">
-                        <HomeComponent/>
-                    </div>
-                    <div className="d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4">
-                        <label className="wd-search-color1">
-                            <PostSummaryListItem/>
-                        </label>
-                    </div>
+        <div className="d-block d-sm-none">
+            <div className="row mt-2">
+                <div className="col-2">
+                    <Navigationsidebar activeParam="home" size="xs"/>
+                </div>
+                <div className="col-10"
+                     style={{"position": "relative"}}>
+                    <HomeComponent/>
                 </div>
             </div>
-            <div className="d-none d-lg-block d-xl-none wd-fg-color-white wd-back-black">
-                {/*This is Large block*/}
-                <div className="row mt-2">
-                    <div className="col-2 col-md-2 col-lg-1 col-xl-2">
-                        <NavigationSidebar active = "home" size = "l"/>
-                    </div>
-                    <div className = "col-6">
-                        <HomeComponent/>
-                    </div>
-                    <div className="d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4">
-                        <label className="wd-search-color1">
-                            <PostSummaryListItem/>
-                        </label>
-                    </div>
+        </div>
+        <div className="d-none d-sm-block d-md-none">
+            <div className="row mt-2">
+                <div className="col-2">
+                    <Navigationsidebar activeParam="home" size="sm"/>
+                </div>
+                <div className="col-10"
+                     style={{"position": "relative"}}>
+                    <HomeComponent/>
                 </div>
             </div>
-            <div className="d-none d-md-block d-lg-none wd-fg-color-white wd-back-black">
-            {/*This is the medium block*/}
-                <div className="row mt-2">
-                    <div className="col-2 col-md-2 col-lg-1 col-xl-2">
-                        <NavigationSidebar active = "home" size = "m"/>
-                    </div>
-                    <div className = "col-6">
-                        <HomeComponent/>
-                    </div>
-                    <div className="d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4">
-                        <label className="wd-search-color1">
-                            <PostSummaryListItem/>
-                        </label>
-                    </div>
+        </div>
+        <div className="d-none d-md-block d-lg-none">
+            <div className="row mt-2">
+                <div className="col-2">
+                    <Navigationsidebar activeParam="home" size="md"/>
+                </div>
+                <div className="col-10"
+                     style={{"position": "relative"}}>
+                    <HomeComponent/>
                 </div>
             </div>
-            <div className="d-none d-sm-block d-md-none wd-fg-color-white wd-back-black">
-                {/*This is the small block*/}
-                <div className="row mt-2">
-                    <div className="col-2 col-md-2 col-lg-1 col-xl-2">
-                        <NavigationSidebar active = "home" size = "m"/>
-                    </div>
-                    <div className = "col-6">
-                        <HomeComponent/>
-                    </div>
-                    <div className="d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4">
-                        <label className="wd-search-color1">
-                            <PostSummaryListItem/>
-                        </label>
-                    </div>
+        </div>
+        <div className="d-none d-lg-block d-xl-none">
+            <div className="row mt-2">
+                <div className="col-1">
+                    <Navigationsidebar activeParam="home" size="lg"/>
+                </div>
+                <div className="col-7"
+                     style={{"position": "relative"}}>
+                    <HomeComponent/>
+                </div>
+                <div className="col-4">
+                    <PostSummaryList/>
                 </div>
             </div>
-            <div className="d-block d-sm-none">
-            {/*This is extra small block*/}
-                <div className="row mt-2">
-                    <div className="col-2 col-md-2 col-lg-1 col-xl-2">
-                        <NavigationSidebar active = "home" size = "m"/>
-                    </div>
-                    <div className = "col-6">
-                        <HomeComponent/>
-                    </div>
-                    <div className="d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4">
-                        <label className="wd-search-color1">
-                            <PostSummaryListItem/>
-                        </label>
-                    </div>
+        </div>
+        <div className="d-none d-xl-block d-xxl-none">
+            <div className="row mt-2">
+                <div className="col-2">
+                    <Navigationsidebar activeParam="home" size="xxl"/>
+                </div>
+                <div className="col-6"
+                     style={{"position": "relative"}}>
+                    <HomeComponent/>
+                </div>
+                <div className="col-4">
+                    <PostSummaryList/>
                 </div>
             </div>
-
-
+        </div>
+        <div className="d-none d-xxl-block">
+            <div className="row mt-2">
+                <div className="col-2">
+                    <Navigationsidebar activeParam="home" size="xxl"/>
+                </div>
+                <div className="col-6"
+                     style={{"position": "relative"}}>
+                    <HomeComponent/>
+                </div>
+                <div className="col-4">
+                    <PostSummaryList/>
+                </div>
+            </div>
+        </div>
     </>
     );
 };
 export default HomeScreen;
-

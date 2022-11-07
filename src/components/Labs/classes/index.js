@@ -19,4 +19,4 @@ const Classes = () => {
         </div>
     )
 };
-export default Classes
+export default Classes;

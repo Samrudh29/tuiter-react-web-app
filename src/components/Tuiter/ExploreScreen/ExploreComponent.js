@@ -1,108 +1,83 @@
 import React from "react";
-import './explore.css';
-import PostSummaryList from "../PostSummaryList/index.js";
-
-const ExploreComponent = (    {
-                                  size
-                              }) => {
-    if (size === "xl") {
-        return (
-            <>
-                <div>
+import "./explore.css";
+const ExploreComponent = ({
+        size
+    }) => {
+        if (size==="md" || size==="lg" || size==="xl" || size==="xxl") {
+            return(
+                <>
                     <div className="row">
-                        <div className="col-10 ps-4">
-                            <div className="wd-rounded-corners-all-around wd-search-color wd">
-                                <i className="fa fa-search ms-2 wd-fg-search-color"></i>
-                                <input className="wd-textarea wd-search-color" placeholder="Search Twitter"></input>
+                        <div className="form-group wd-search mb-1">
+                            <div className="input-group">
+                                <span className="fa fa-search ps-3 form-control-feedback" style={{color:"#657786", paddingTop: "10px"}}></span>
+                                <input type="text" className="form-control rounded-pill small wd-bg-color-black-twitter border-0" placeholder="Search Tuiter">
+                                </input>
+                                <span className="fa fa-cog fa-inverse ps-2 pt-1" style={{color:"#2a9fd6", fontSize:"30px"}}></span>
                             </div>
                         </div>
-                        <div className="col-2">
-                            <label className="wd-size-xxl ps-3">
-                                <a href="explore-settings.html" style={{textDecoration: "none"}}>
-                                    <i className="fa fa-cog fa-inverse wd-gear"></i>
-                                </a>
-                            </label>
-
-
-                        </div>
                     </div>
-                    <ul className="nav mb-2 nav-tabs">
-                        <li className="nav-item wd-new-tab ">
-                            <a className="nav-link active" style={{color: "white"}} aria-current="page" href="#">For
-                                You</a>
+                    <ul className="nav mb-1 nav-tabs">
+                        <li className="nav-item">
+                            <a className="nav-link active" href="#"><label>For you</label></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link wd-fg-search-color" href="#">Trending</a>
+                            <a className="nav-link" href="#"><label>Trending</label></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link wd-fg-search-color" href="#">News</a>
+                            <a className="nav-link" href="#"><label>News</label></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link wd-fg-search-color" href="#">Sports</a>
+                            <a className="nav-link" href="#"><label>Sports</label></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link wd-fg-search-color" href="#">Entertainment</a>
+                            <a className="nav-link" href="#"><label>Entertainment</label></a>
                         </li>
                     </ul>
-                    <div className="pt-1 position-relative">
-                        <img src="/tuiter/images/spacex.jpg" className="card-img" width="100%"></img>
+                    <div className="position-relative">
+                        <img src="/tuiter/images/starship.jpeg" className="card-img rounded-0" width="100%"></img>
                         <div className="card-img-overlay h-100 d-flex flex-column justify-content-end">
-                            <h1 className="card-title wd-spacex-1 bottom-50">SpaceX's Starship</h1>
+                            <h1 className="card-title wd-fg-color-white bottom-50" >SpaceX's Starship</h1>
                         </div>
                     </div>
-                </div>
-                {/*{PostSummaryList()}*/}
-            </>
-        );
-    }
-    else if(size === "s") {
-        return (
-            <>
-                <div>
+                </>
+            );
+        }
+        else {
+            return(
+                <>
                     <div className="row">
-                        <div className="col-10 ps-4">
-                            <div className="wd-rounded-corners-all-around wd-search-color wd">
-                                <i className="fa fa-search ms-2 wd-fg-search-color"></i>
-                                <input className="wd-textarea wd-search-color" placeholder="Search Twitter"></input>
+                        <div className="form-group wd-search mb-1">
+                            <div className="input-group">
+                                <span className="fa fa-search ps-3 form-control-feedback" style={{color:"#657786", paddingTop: "10px"}}></span>
+                                <input type="text" className="form-control rounded-pill small wd-bg-color-black-twitter border-0" placeholder="Search Tuiter">
+                                </input>
+                                <span className="fa fa-cog fa-inverse ps-2 pt-1" style={{color:"#2a9fd6", fontSize:"30px"}}></span>
                             </div>
                         </div>
-                        <div className="col-2">
-                            <label className="wd-size-xxl ps-3">
-                                <a href="explore-settings.html" style={{textDecoration: "none"}}>
-                                    <i className="fa fa-cog fa-inverse wd-gear"></i>
-                                </a>
-                            </label>
-
-
-                        </div>
                     </div>
-                    <ul className="nav mb-2 nav-tabs">
-                        <li className="nav-item wd-new-tab ">
-                            <a className="nav-link active" style={{color: "white"}} aria-current="page" href="#">For
-                                You</a>
+                    <ul className="nav mb-1 nav-tabs">
+                        <li className="nav-item">
+                            <a className="nav-link active" href="#"><label>For you</label></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link wd-fg-search-color" href="#">Trending</a>
+                            <a className="nav-link" href="#"><label>Trending</label></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link wd-fg-search-color" href="#">News</a>
+                            <a className="nav-link" href="#"><label>News</label></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link wd-fg-search-color" href="#">Sports</a>
+                            <a className="nav-link" href="#"><label>Sports</label></a>
                         </li>
-
                     </ul>
-                    <div className="pt-1 position-relative">
-                        <img src="/tuiter/images/spacex.jpg" className="card-img" width="100%"></img>
+                    <div className="position-relative">
+                        <img src="/tuiter/images/starship.jpeg" className="card-img rounded-0" width="100%"></img>
                         <div className="card-img-overlay h-100 d-flex flex-column justify-content-end">
-                            <h1 className="card-title wd-spacex-1 bottom-50">SpaceX's Starship</h1>
+                            <h1 className="card-title wd-fg-color-white bottom-50" >SpaceX's Starship</h1>
                         </div>
                     </div>
-                </div>
-                {/*{PostSummaryList()}*/}
-            </>
-        );
-    }
-
+                </>
+            );
+        }
 }
 export default ExploreComponent;
+

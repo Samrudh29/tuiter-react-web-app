@@ -1,24 +1,18 @@
-const PostSummaryListItem = (post) => {
+const PostSummaryItem = (post) => {
     return(`
-<div class=" ps-2 pt-2 pb-2">
-<div class="row">
-                    <div class="col-9">
-                        <label class="text-muted">${post.topic}</label></br>
-                        <label class="wd-size-xxl"><b>${post.userName}</b>
-<!--                            <i class="fa fa-circle-check ms-2"></i>-->
-                        </label>
-                        <i class="fas fa-check-circle wd-fg-color-white"></i>
-                        <label class="text-muted">- ${post.time}</label></br>
-                        <b>${post.title}</b>
-                    </div>
-                        <div class="col-3">
-                        <div class="pt-2 pe-2">
-                            <img src=${post.image} class="wd-rounded-corners-logo img-fluid float-end">
-                        </div>  
-                    </div>
-                    </div>
-                    </div>
-       
+         <li class="list-group-item">
+            <div class="row">
+                <div class="wd-topic d-flex flex-column col-10">
+                    <label class="wd-topic wd-fg-color-light-gray">${post.topic}</label>
+                    <label class="wd-fg-color-white h6">${post.userName} <i class="fas fa-circle"></i>
+                    <label class="wd-topic wd-fg-color-light-gray">-${post.time}</label></label> 
+                    <label class="wd-fg-color-white h6">${post.title}</label>
+                </div>
+                <div class="col-2">
+                    <img src=${post.image} class="wd-rounded-borders img-fluid">
+                </div>
+            </div>
+        </li>
     `);
 }
-export default PostSummaryListItem;
+export default PostSummaryItem;

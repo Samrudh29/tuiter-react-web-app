@@ -1,4 +1,4 @@
-import PostList from "../PostList/PostList"
+import PostList from "../PostList/"
 
 const HomeComponent = () => {
     return(
@@ -7,3 +7,4 @@ const HomeComponent = () => {
 }
 
 export default HomeComponent;
+

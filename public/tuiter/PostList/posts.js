@@ -1,3 +1,10 @@
 export default [
-    { logo: '../images/elon.jpg', Name: 'Elon Musk', UserName: '@elonmusk', time: '2h', description1: 'Amazing show about', tag:'@Inspiration4x' ,description2: 'mission!', bigImage: '../images/countdown.jpg', bigTitle: 'Countdown: Inspiration4 Mission to space | Netflix Official Site', text: 'From training to launch to landing, this all-access docuseries rides along with the inpiration4 crew on the first all-civilian orbital space', link: '&#128279; netflix.com', comment: '4.2k', retweet: '3.5k', like: '37.5k'},
-    { logo: '../images/newyorkpost.jpg', Name: 'New York Post', UserName: '@nypost', time: '23h', description1: 'Grimes seen reading Karl Marx following split with world riches man Elon Musk', tag: 'trib.al/nx2Gfaq',description2: '',bigImage: '../images/grimes.jpg', bigTitle: '.', text: '', link: '', comment: '965', retweet: '2.45k', like: '4k'}, ];
+    {dp:'../images/elon_musk_dp_48x48.jpeg', name:'Elon Musk', userName: '@elonmusk', time: '23h',
+        caption: 'Amazing show about @Inspiration4x mission!', image: '../images/elon_musk_post.jpeg',
+        imageTitle:'Countdown: Inspiration 4 mission to space | Netflix Official Site',
+        text:'From Training to launch to landing, this all-access docuseries rides along with the Inspiration4 crew on '
+            + 'the first all-civilian orbital space..', comments: '4.2k', retweets: '3.5k', likes: '37.5k'},
+    {dp:'../images/ny_post_dp_48x48.jpeg', name: 'New York Post', userName: '@nypost', time: '23h',
+        caption: 'Grimes seen reading Karl Marx following split with world\'s richest man Elon Musk',
+        image: '../images/ny_post.jpeg', imageTitle:'', text:'', comments: '965', retweets: '2.4k', likes: '4k'},
+];

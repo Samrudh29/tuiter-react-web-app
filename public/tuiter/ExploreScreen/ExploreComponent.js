@@ -1,105 +1,111 @@
 import PostSummaryList from "../PostSummaryList/index.js";
 
 const ExploreComponent = (size) => {
-    if (size === "xl") {
-        return (`
-               <div>
-            <div class="row">
-                       <!-- search field and cog -->
-                    <div class="col-10 ps-4">
-                        <div class="wd-rounded-corners-all-around wd-search-color wd">
-                            <i class="fa fa-search ms-2 wd-fg-search-color"></i>
-                <input class="wd-textarea wd-search-color" placeholder="Search Twitter"/>
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <label class="wd-size-xxl ps-3">
-                            <a href="explore-settings.html" style = "text-decoration: none";>
-                        <i class="fa fa-gear fa-inverse wd-gear"></i>
-                            </a>
-                        </label>
-
-
+    if (size === "sm") {
+        return(`
+           <div class="row">
+                <div class="form-group wd-search mb-1">
+                    <div class="input-group ps-1 pe-1">
+                        <span class="fa fa-search ps-3 form-control-feedback" style="color:#657786; padding-top: 10px"></span>
+                        <input type="text" class="form-control rounded-pill small wd-bg-color-black-twitter border-0" placeholder="Search Tuiter">
+                        <span class="fa fa-cog wd-cogsize fa-inverse ps-2 pt-1" style="color:#2a9fd6"></span>
                     </div>
                 </div>
-           <ul class="nav mb-2 nav-tabs">
-                      <!-- tabs -->
-                    <li class="nav-item wd-new-tab ">
-                        <a class="nav-link active" style="color: white" aria-current="page" href="#">For You</a>
+           </div>
+           <ul class="nav mb-1 nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><label>For you</label></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wd-fg-search-color" href="#">Trending</a>
+                        <a class="nav-link" href="#"><label>Trending</label></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wd-fg-search-color" href="#">News</a>
+                        <a class="nav-link" href="#"><label>News</label></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wd-fg-search-color" href="#">Sports</a>
+                        <a class="nav-link" href="#" tabindex="-1"><label>Sports</label></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link wd-fg-search-color" href="#">Entertainment</a>
-                    </li>
+                </ul>
            </ul>
-           <!-- image with overlaid text -->
-                     <div class="pt-1 position-relative">
-                    <img src="../spacex.jpg" class="card-img" width="100%">
-                    <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
-                        <h1 class="card-title wd-spacex-1 bottom-50" >SpaceX's Starship</h1>
-                    </div>
+           <div class="position-relative">
+                <img src="../images/starship.jpeg" class="card-img rounded-0" width="100%">
+                <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+                    <h1 class="card-title wd-fg-color-white bottom-50" >SpaceX's Starship</h1>
                 </div>
-                </div>
+           </div>
            ${PostSummaryList()}
     `);
     }
-    else if(size === "m") {
-
-        return (`
-               <div>
-            <div class="row">
-                       <!-- search field and cog -->
-                    <div class="col-10 ps-4">
-                        <div class="wd-rounded-corners-all-around wd-search-color wd">
-                            <i class="fa fa-search ms-2 wd-fg-search-color"></i>
-                <input class="wd-textarea wd-search-color" placeholder="Search Twitter"/>
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <label class="wd-size-xxl ps-3">
-                            <a href="explore-settings.html" style = "text-decoration: none";>
-                        <i class="fa fa-gear fa-inverse wd-gear"></i>
-                            </a>
-                        </label>
-
-
+    if (size === "xs") {
+        return(`
+           <div class="row">
+                <div class="form-group wd-search mb-1">
+                    <div class="input-group ps-1 pe-1">
+                        <span class="fa fa-search ps-3 form-control-feedback" style="color:#657786; padding-top: 10px"></span>
+                        <input type="text" class="form-control rounded-pill small wd-bg-color-black-twitter border-0" placeholder="Search Tuiter">
+                        <span class="fa fa-cog wd-cogsize fa-inverse ps-2 pt-1" style="color:#2a9fd6"></span>
                     </div>
                 </div>
-           <ul class="nav mb-2 nav-tabs">
-                      <!-- tabs -->
-                    <li class="nav-item wd-new-tab ">
-                        <a class="nav-link active" style="color: white" aria-current="page" href="#">For You</a>
+           </div>
+           <ul class="nav mb-1 nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><label>For you</label></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wd-fg-search-color" href="#">Trending</a>
+                        <a class="nav-link" href="#"><label>Trending</label></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link wd-fg-search-color" href="#">News</a>
+                        <a class="nav-link" href="#" tabindex="-1"><label>News</label></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link wd-fg-search-color" href="#">Sports</a>
-                    </li>
-
+                </ul>
            </ul>
-           <!-- image with overlaid text -->
-                     <div class="pt-1 position-relative">
-                    <img src="../spacex.jpg" class="card-img" width="100%">
-                    <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
-                        <h1 class="card-title wd-spacex-1 bottom-50" >SpaceX's Starship</h1>
-                    </div>
+           <div class="position-relative">
+                <img src="../images/starship.jpeg" class="card-img rounded-0" width="100%">
+                <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+                    <h1 class="card-title wd-fg-color-white bottom-50" >SpaceX's Starship</h1>
                 </div>
-                </div>
+           </div>
            ${PostSummaryList()}
     `);
-
+    }
+    else {
+        return(`
+           <div class="row">
+                <div class="form-group wd-search mb-1">
+                    <div class="input-group ps-1 pe-1">
+                        <span class="fa fa-search ps-3 form-control-feedback" style="color:#657786; padding-top: 10px"></span>
+                        <input type="text" class="form-control rounded-pill small wd-bg-color-black-twitter border-0" placeholder="Search Tuiter">
+                        <span class="fa fa-cog wd-cogsize fa-inverse ps-2 pt-1" style="color:#2a9fd6"></span>
+                    </div>
+                </div>
+           </div>
+           <ul class="nav mb-1 nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><label>For you</label></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><label>Trending</label></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><label>News</label></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><label>Sports</label></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1"><label>Entertainment</label></a>
+                    </li>
+                </ul>
+           </ul>
+           <div class="position-relative">
+                <img src="../images/starship.jpeg" class="card-img rounded-0" width="100%">
+                <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+                    <h1 class="card-title wd-fg-color-white bottom-50" >SpaceX's Starship</h1>
+                </div>
+           </div>
+           ${PostSummaryList()}
+    `);
     }
 }
 export default ExploreComponent;
+

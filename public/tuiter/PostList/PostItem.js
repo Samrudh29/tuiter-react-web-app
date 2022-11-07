@@ -1,123 +1,102 @@
-const PostSummaryListItem = (post) => {
-    if (post.bigTitle === '.') {
-
+const PostItem = (post, size) => {
+    if (size==="xs") {
         return (`
-
-<div class="row pt-3">
-<div class="col-1">
-<img src="${post.logo}" class="wd-round-picture">
-</div>
-<div class="col-10 ps-3">
-<label class = "wd-fg-color-white">${post.Name}</label>
-      <i class="fas fa-check-circle"></i>
-      <label class="text-muted">${post.UserName} - ${post.time}</label>  
-      <br/>
-      <label class="wd-fg-color-white"> ${post.description1} <label class="wd-fg-color-blue">${post.tag}</label>
-      ${post.description2}
-</div>
-<div class="col-1">
-<i class="fa fa-ellipsis-h"></i>
-</div>
-</div>
-<div class="row">
-<div class="col-1">
-</div>
-<div class="col-11 pt-2 pb-2">
-            <div class="wd-rounded-corners-all-around wd-bor">
-                <img src="${post.bigImage}" class="wd-rounded-corners-all-around img-fluid">
-                <!--        </div>-->
+         <div class="d-flex flex-row">
+            <div class="wd-topic d-flex flex-column">
+                <img src="${post.dp}" class="rounded-pill">
             </div>
-</div>
-</div>
-<div class="row">
-<div class="col-1"> </div>
-<div class = "col-11">
-            <label>
-                <a href="#" style = "text-decoration: none;" class="pt-3 ps-3 wd-grey-color wd-font-size"> <i class="far fa-comment"></i>
-                <label class="text-muted ps-1">${post.comment}</label></a>
-            </label>
-                        <label>
-                <a href="#" style = "text-decoration: none;" class="pt-3 ps-5 wd-grey-color wd-font-size"> <i class="fa fa-retweet"></i>
-                <label class="text-muted ps-1">${post.retweet}</label></a>
-            </label>
-            
-            <label>
-                <a href="#" style = "text-decoration: none;" class="pt-3 ps-5 wd-grey-color wd-font-size"> <i class="fa fa-heart"></i>
-                <label class="text-muted ps-1">${post.like}</label></a>
-            </label>
-                        <label>
-                <a href="#" style = "text-decoration: none;" class="pt-3 ps-5 wd-grey-color wd-font-size"> <i class="fa fa-arrow-up-from-bracket"></i>
-                <label class="text-muted ps-1"></label></a>
-            </label>
-</div>
-
-</div>
-       
+            <div class="ps-4">
+                <label class="wd-fg-color-white h6">${post.name} <i class="fas fa-check-circle"></i></label>
+                <label class="wd-topic wd-fg-color-light-gray">${post.userName}</i>
+                <label class="wd-topic wd-fg-color-light-gray">&#183; ${post.time}</label></label>
+                <br>
+                <label class="wd-fg-color-white h6">${post.caption}</label>
+                <div class="wd-rounded-borders border border-secondary">
+                    ${post.imageTitle ?
+                    `<img src=${post.image} class="img-fluid border-bottom border-secondary">
+                            <label class="wd-fg-color-white h6 ps-1">${post.imageTitle}</label>
+                            <label class="ps-1">${post.text}</label>` :
+                    `<img src=${post.image} class="img-fluid border-bottom border-secondary wd-rounded-borders">`}
+                </div>
+                <div>
+                    <i class="far fa-comment"></i>
+                    <label class="wd-comment-text">&nbsp;&nbsp;${post.comments}</label>
+                    <i class="fas fa-retweet ps-3"></i>
+                    <label class="wd-comment-text">&nbsp;&nbsp;${post.retweets}</label>
+                    <i class="far fa-heart ps-3"></i>
+                    <label class="wd-comment-text">&nbsp;&nbsp;${post.likes}</label>
+                    <i class="fa fa-arrow-up-from-bracket ps-3"></i>
+                </div>
+                <br>
+            </div>
+        </div>
     `);
-
+    }
+    else if (size==="sm") {
+        return (`
+         <div class="d-flex flex-row">
+            <div class="wd-topic d-flex flex-column">
+                <img src="${post.dp}" class="rounded-pill">
+            </div>
+            <div class="ps-4">
+                <label class="wd-fg-color-white h6">${post.name} <i class="fas fa-check-circle"></i></label>
+                <label class="wd-topic wd-fg-color-light-gray">${post.userName}</i>
+                <label class="wd-topic wd-fg-color-light-gray">&#183; ${post.time}</label></label>
+                <br>
+                <label class="wd-fg-color-white h6">${post.caption}</label>
+                <div class="wd-rounded-borders border border-secondary">
+                    ${post.imageTitle ?
+            `<img src=${post.image} class="img-fluid border-bottom border-secondary">
+                            <label class="wd-fg-color-white h6 ps-1">${post.imageTitle}</label>
+                            <label class="ps-1">${post.text}</label>` :
+            `<img src=${post.image} class="img-fluid border-bottom border-secondary wd-rounded-borders">`}
+                </div>
+                <div>
+                    <i class="far fa-comment"></i>
+                    <label class="wd-comment-text">&nbsp;&nbsp;${post.comments}</label>
+                    <i class="fas fa-retweet ps-4"></i>
+                    <label class="wd-comment-text">&nbsp;&nbsp;${post.retweets}</label>
+                    <i class="far fa-heart ps-4"></i>
+                    <label class="wd-comment-text">&nbsp;&nbsp;${post.likes}</label>
+                    <i class="fa fa-arrow-up-from-bracket ps-4"></i>
+                </div>
+                <br>
+            </div>
+        </div>
+    `);
     }
     else {
         return (`
-
-<div class="row pt-2">
-<div class="col-1">
-<img src="${post.logo}" class="wd-round-picture">
-</div>
-<div class="col-10 ps-3">
-<label class = "wd-fg-color-white">${post.Name}</label>
-      <i class="fas fa-check-circle"></i>
-      <label class="text-muted">${post.UserName} - ${post.time}</label>  
-      <br/>
-      <label class="wd-fg-color-white"> ${post.description1} <label class="wd-fg-color-blue">${post.tag}</label>
-      ${post.description2}
-</div>
-<div class="col-1">
-<i class="fa fa-ellipsis-h"></i>
-</div>
-</div>
-<div class="row">
-<div class="col-1">
-</div>
-<div class="col-11 pt-2">
-            <div class="wd-rounded-corners-all-around wd-bor">
-                <img src="${post.bigImage}" class="wd-rounded-corners-top img-fluid">
-                <!--        </div>-->
-                    <label class="wd-left12 wd-pad-bottom pt-2 border-top border-secondary">
-                        <label class="wd-fg-color-white"> 
-                        ${post.bigTitle}</label>
-                            <label class="text-muted">
-                              ${post.text}
-                            </label>
-                            <label class="text-muted">${post.link}</label>
-                    </label>
+         <div class="d-flex flex-row">
+            <div class="wd-topic d-flex flex-column">
+                <img src="${post.dp}" class="rounded-pill">
             </div>
-</div>
-</div>
-<div class="row">
-<div class="col-1"> </div>
-<div class = "col-11">
-            <label>
-                <a href="#" style = "text-decoration: none;" class="pt-3 ps-3 wd-grey-color wd-font-size"> <i class="far fa-comment"></i>
-                <label class="text-muted ps-1">${post.comment}</label></a>
-            </label>
-                        <label>
-                <a href="#" style = "text-decoration: none;" class="pt-3 ps-5 wd-grey-color wd-font-size"> <i class="fa fa-retweet"></i>
-                <label class="text-muted ps-1">${post.retweet}</label></a>
-            </label>
-            
-            <label>
-                <a href="#" style = "text-decoration: none;" class="pt-3 ps-5 wd-grey-color wd-font-size"> <i class="fa fa-heart"></i>
-                <label class="text-muted ps-1">${post.like}</label></a>
-            </label>
-                        <label>
-                <a href="#" style = "text-decoration: none;" class="pt-3 ps-5 wd-grey-color wd-font-size"> <i class="fa fa-arrow-up-from-bracket"></i>
-                <label class="text-muted ps-1"></label></a>
-            </label>
-</div>
-
-</div>
-       
+            <div class="ps-4">
+                <label class="wd-fg-color-white h6">${post.name} <i class="fas fa-check-circle"></i></label>
+                <label class="wd-topic wd-fg-color-light-gray">${post.userName}</i>
+                <label class="wd-topic wd-fg-color-light-gray">&#183; ${post.time}</label></label>
+                <br>
+                <label class="wd-fg-color-white h6">${post.caption}</label>
+                <div class="wd-rounded-borders border border-secondary">
+                    ${post.imageTitle ?
+            `<img src=${post.image} class="img-fluid border-bottom border-secondary">
+                    <label class="wd-fg-color-white h6 ps-1">${post.imageTitle}</label>
+                    <label class="ps-1">${post.text}</label>` :
+            `<img src=${post.image} class="img-fluid border-bottom border-secondary wd-rounded-borders">`}
+                </div>
+                <div>
+                    <i class="far fa-comment"></i>
+                    <label class="wd-comment-text">&nbsp;&nbsp;${post.comments}</label>
+                    <i class="fas fa-retweet ps-5"></i>
+                    <label class="wd-comment-text">&nbsp;&nbsp;${post.retweets}</label>
+                    <i class="far fa-heart ps-5"></i>
+                    <label class="wd-comment-text">&nbsp;&nbsp;${post.likes}</label>
+                    <i class="fa fa-arrow-up-from-bracket ps-5"></i>
+                </div>
+                <br>
+            </div>
+        </div>
     `);
     }
 }
-export default PostSummaryListItem;
+export default PostItem;
