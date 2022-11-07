@@ -1,11 +1,6 @@
 import React from "react";
-import Classes from "./classes";
 import {Link} from "react-router-dom";
-import Styles from "./styles"
-import ConditionalOutput from "./conditional-output";
-import TodoItem from "./todo/todoitem"
-import TodoList from "./todo/todolist"
-import ReduxExamples from "./redux-examples"
+
 const Index = () => {
     return(
         <>
