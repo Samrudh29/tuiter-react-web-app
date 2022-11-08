@@ -1,6 +1,6 @@
 import React from "react";
 import Navigationsidebar from "../NavigationSidebar";
-import ExploreComponent from "./explorecomponent.js";
+import ExploreComponent from "./explorecomponent";
 import WhoToFollowList from "../WhoToFollowList";
 import PostSummaryList from "../PostSummaryList";
 
