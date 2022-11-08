@@ -3,8 +3,8 @@ import Classes from "../classes/index.js";
 import {Link} from "react-router-dom";
 import Styles from "../styles"
 import ConditionalOutput from "../conditional-output";
-import TodoItem from "../todo/todoitem"
-import TodoList from "../todo/todolist"
+import TodoItem from "../todo/TodoItem"
+import TodoList from "../todo/TodoList"
 
 
 const Assignment6 = () => {
