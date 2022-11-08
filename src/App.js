@@ -8,7 +8,7 @@ import Labs from "./components/Labs/index";
 import Index from "./components/Tuiter/index";
 // import HomeScreen from "./components/Tuiter/HomeScreen/homescreen";
 import HomeScreen from "./components/Tuiter/home-screen"
-import ExploreScreen from "./components/Tuiter/ExploreScreen/explorescreen"
+import ExploreScreen from "./components/Tuiter/ExploreScreen"
 import Profile from "./components/Tuiter/Profile/index"
 import EditProfile from "./components/Tuiter/EditProfile"
 import Assignment7 from "./components/Labs/a7/index"
