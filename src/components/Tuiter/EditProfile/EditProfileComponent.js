@@ -6,12 +6,12 @@ import "../Profile/profile.css"
 const EditProfileComponent = ({profile}) => {
     const navigate = useNavigate();
     const profileData = {
-        name: 'Samrudh Kumaraswamy', handle: 'samrudh7',
+        name: 'Samrudh Kumaraswamy', handle: 'samrudh10',
         profilePicture: '/tuiter/images/test.jpeg', bannerPicture: '/tuiter/images/webDev.png',
-        bio: 'Masters student at Northeastern University, Khoury college of Computer Science',
-        website: 'youtube.com/samtv',
-        location: 'Boston, MA',	dateOfBirth: '11/29/1995',	dateJoined: '5/2012',
-        followingCount: 312,	followersCount: 180
+        bio: 'Masters Student at Northeastern University, affiliated to Khoury College Of Computer Sciences',
+        website: 'youtube.com/webdevtv',
+        location: 'Boston, MA',	dateOfBirth: '29/11/1995',	dateJoined: '12/2012',
+        followingCount: 620,	followersCount: 303
     }
     let [oldProfile, setOldProfile] = useState(profileData);
     const saveHandler = () => {

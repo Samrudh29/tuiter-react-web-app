@@ -1,25 +1,26 @@
-import React from "react";
+import {React, useState} from "react";
 import {useDispatch} from "react-redux";
 import "../ExploreScreen/explore.css"
 import TuitStats from "../tuit-stats/tuit-stats";
+import {createTuit, deleteTuit, findAllTuits, updateTuit} from "../../../actions/tuits-actions";
 
 const TuitListItem = ({tuit}) => {
     const dispatch = useDispatch();
-    const deleteTuit = (tuit) => {
-        dispatch({type: 'delete-tuit', tuit})
-    };
+    const [newTuit, setNewTuit] =
+        useState({tuit: 'New tuit'});
     return (
             <div className="mt-2 d-flex flex-row border-bottom border-secondary">
                 <div className="wd-topic d-flex flex-column ps-2">
-                    <img src={tuit['logo-image']} className="rounded-pill"></img>
+                    <img src={tuit['logoImage']} className="rounded-pill"></img>
                 </div>
                 <div className="ps-3 me-3" style={{width:'100%'}}>
                     <label className="wd-fg-color-white h6 fw-bold">{tuit.postedBy.username}
                         {tuit.verified && <i className="ms-1 fas fa-check-circle"></i>}</label>
                     <label className="wd-topic wd-fg-color-light-gray">&nbsp;@{tuit.handle}</label>
-                    <i onClick={() => deleteTuit(tuit)} className="fa fa-pull-right">&#xf00d;</i>
+                    <i className="fa fa-pull-right" onClick={() => deleteTuit(dispatch, tuit)}>&#xf00d;</i>
                     <br></br>
-                    <label className="wd-fg-color-white h6">{tuit.tuit}</label>
+                    <label className="wd-fg-color-white h6" onClick={() => deleteTuit(
+                        dispatch, tuit)}>{tuit.tuit}</label>
                     {
                         tuit.attachments && tuit.attachments.image &&
                         <img src={tuit.attachments.image}
@@ -38,11 +39,25 @@ const TuitListItem = ({tuit}) => {
                     }
                     <div>
                         <i className="far fa-comment"></i>
-                        <label className="wd-comment-text me-5">&nbsp;&nbsp;{tuit.stats.comments}</label>
-                        <i className="fas fa-retweet ps-5"></i>
-                        <label className="wd-comment-text me-5">&nbsp;&nbsp;{tuit.stats.retuits}</label>
-                        <TuitStats tuit={tuit}/>
-                        <i className="fas fa-external-link-alt ps-5"></i>
+                        <label className="wd-comment-text me-3">&nbsp;&nbsp;{tuit.stats.comments}</label>
+                        <i className="fas fa-retweet ps-3"></i>
+                        <label className="wd-comment-text me-3">&nbsp;&nbsp;{tuit.stats.retuits}</label>
+                        <label>
+                            <i onClick={() => updateTuit(dispatch, {
+                                ...tuit,
+                                likes: tuit.likes + 1
+                            })} className="far fa-thumbs-up ms-3 me-2"></i>
+                            {tuit.likes}
+                        </label>
+                        <label>
+
+                            <i onClick={() => updateTuit(dispatch, {
+                                ...tuit,
+                                dislikes: tuit.dislikes + 1
+                            })} className="far fa-thumbs-down ms-3 me-2"></i>
+                            {tuit.dislikes}
+                        </label>
+                        <i className="fas fa-external-link-alt ps-4"></i>
                     </div>
                     <br></br>
 

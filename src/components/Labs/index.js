@@ -1,6 +1,11 @@
 import React from "react";
+import Classes from "./classes";
 import {Link} from "react-router-dom";
-
+import Styles from "./styles"
+import ConditionalOutput from "./conditional-output";
+import TodoItem from "./todo/todoitem"
+import TodoList from "./todo/todolist"
+import ReduxExamples from "./redux-examples"
 const Index = () => {
     return(
         <>
@@ -10,14 +15,13 @@ const Index = () => {
             </Link> |
             <Link to="/tuiter/home">
                 Tuiter
-            </Link> |
-            <Link to="/a6">
-                         Assignment 6
-                        </Link> |
-            <Link to="/a7">
-                                Assignment 7
-                                    </Link>
-
+            </Link>
+            <ReduxExamples/>
+            <TodoList/>
+            <TodoItem/>
+            <ConditionalOutput/>
+            <Styles/>
+            <Classes/>
         </>
     )
 };
