@@ -2,13 +2,13 @@ import TodoItem from "./TodoItem.js";
 import todos from "./todos.js";
 const TodoList = () => {
     return(`
-        <ul>
-            ${
+      <ul>
+         ${
         todos.map(todo => {
             return(TodoItem(todo));
         }).join('')
     }
-        </ul>
-    `);
+      </ul>
+   `);
 }
 export default TodoList;
