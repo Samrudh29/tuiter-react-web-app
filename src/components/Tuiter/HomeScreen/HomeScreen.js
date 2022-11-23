@@ -1,4 +1,4 @@
-import HomeComponent from "./homecomponent";
+import HomeComponent from "./HomeComponent";
 import Navigationsidebar from ".././NavigationSidebar";
 import PostList from ".././PostList";
 import PostSummaryList from "../PostSummaryList";
